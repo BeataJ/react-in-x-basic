@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TodoList from "./TodoList";
 
 function App() {
-  useState([])
+  const [todos, setTodos] = useState([])
   return (
     <>
       <TodoList />
