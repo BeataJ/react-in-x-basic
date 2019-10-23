@@ -6,8 +6,14 @@ function App() {
   const todoNameRef = useRef()
 
   function handleAddTodo(e) {
-    e.preventDefult();
+    
+    const name = todoNameRef.current.value
 
+    if(name === '') return
+    setTodos(prevTodos => {
+      return [...prevTodos, {id: 1, name: name, complete: false}]
+    })
+    todoNameRef.current.value = null
 
   }
 
